@@ -77,7 +77,6 @@ Estas exclusiones ayudan a definir claramente los límites del proyecto y garant
 
 7. Documentación y Comunicación:
     * Documentación detallada de la arquitectura del modelo, parámetros clave y resultados obtenidos.
-    * Comunicación continua con profesionales de la salud para obtener retroalimentación y realizar ajustes según sea necesario.
 
 
 

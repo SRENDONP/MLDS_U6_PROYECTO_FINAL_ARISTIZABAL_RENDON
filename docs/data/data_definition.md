@@ -2,24 +2,24 @@
 
 ## Origen de los datos
 
-- [ ] Especificar la fuente de los datos y la forma en que se obtuvieron. 
+- [x] **Fuente de Datos:** Los datos provienen de Un conjunto de imágenes de rayos-X torácicos disponible en Kaggle. [Ver conjunto de datos](https://www.kaggle.com/datasets/ahmedhaytham/chest-xray-images-pneumonia-with-new-class).
 
 ## Especificación de los scripts para la carga de datos
 
-- [ ] Especificar los scripts utilizados para la carga de los datos. 
+- [x] **Scripts de Carga:**
+  - **Script de Google Drive:** `cargar_datos.ipynb` se utiliza para cargar las imágenes desde Google Drive para ser utilizadas como matrices de numpy, debido a que por motivos de accesibilidad, se decidió guardar las imágenes de Kaggle en Google Drive.
 
 ## Referencias a rutas o bases de datos origen y destino
 
-- [ ] Especificar las rutas o bases de datos de origen y destino para los datos.
-
 ### Rutas de origen de datos
+- [x] **Ubicación de Archivos de Origen:** Los archivos de origen se encuentran en el directorio `/Data_blance/` en [Kaggle](https://www.kaggle.com/datasets/ahmedhaytham/chest-xray-images-pneumonia-with-new-class).
+- [x] **Estructura de Archivos de Origen:** Cada archivo de imagen está dentro de una carpeta correspondiente a su conjunto de datos (`Train`, `Test`, `Val`) donde se encuentran ordenadas por clasificación (`Normal`, `Virus`, `Bacteria`).
+- [x] **Ubicación de Archivos de Destino:** Los archivos de origen se encuentran en un .zip llamado `x-rays.zip` que contiene todos los archivos del directorio `/Data_blance/` en [Google Drive](https://drive.google.com/file/d/1It4NYRJNEem3YLHJqYZyclUbR85eqZH8/view?usp=sharing).
+- [x] **Estructura de Archivos de Origen:** Cada archivo de imagen está dentro de una carpeta correspondiente a su conjunto de datos (`Train`, `Test`, `Val`) donde se encuentran ordenadas por clasificación (`Normal`, `Virus`, `Bacteria`).
+- [x] **Procedimientos de Transformación y Limpieza:**
+  - No se eliminan imágenes duplicadas debido a que no se encuentran registros duplicados y se verifican los datos para asegurar que no hay imágenes corruptas.
 
-- [ ] Especificar la ubicación de los archivos de origen de los datos.
-- [ ] Especificar la estructura de los archivos de origen de los datos.
-- [ ] Describir los procedimientos de transformación y limpieza de los datos.
+### Base de Datos de Destino
 
-### Base de datos de destino
-
-- [ ] Especificar la base de datos de destino para los datos.
-- [ ] Especificar la estructura de la base de datos de destino.
-- [ ] Describir los procedimientos de carga y transformación de los datos en la base de datos de destino.
+- [x] **Base de Datos de Destino:** Los datos procesados se almacenan en Google Drive en la carpeta `/Data_blance/`.
+- [x] **Estructura de la Base de Datos de Destino:** Cada imagen en Google Drive tiene un identificador único. Dentro de la aplicación se puede consultar el tamaño y la fecha de subida.

@@ -7,7 +7,7 @@
 ## Especificación de los scripts para la carga de datos
 
 - [x] **Scripts de Carga:**
-  - **Script de Google Drive:** `cargar_datos.ipynb` se utiliza para cargar las imágenes desde Google Drive para ser utilizadas como matrices de numpy, debido a que por motivos de accesibilidad, se decidió guardar las imágenes de Kaggle en Google Drive.
+  - **Script de Google Drive:** [cargar_datos.ipynb](/scripts/data_acquisition/cargar_datos.ipynb) Este método se emplea para cargar imágenes desde Google Drive con el propósito de utilizarlas como matrices de numpy. Esta elección se basa en consideraciones de accesibilidad, ya que se ha decidido almacenar las imágenes de Kaggle en Google Drive.
 
 ## Referencias a rutas o bases de datos origen y destino
 

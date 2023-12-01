@@ -4,4 +4,4 @@ h5py
 keras
 tensorflow
 tensorboar
-protobuf~=3.20.4
+protobuf~=3.20.0

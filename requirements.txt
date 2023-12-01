@@ -3,5 +3,5 @@ opencv-python-headless
 h5py
 keras
 tensorflow
-#tensorboar
+tensorboar
 protobuf~=1.9.2

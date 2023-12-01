@@ -2,6 +2,6 @@
 opencv-python-headless
 h5py
 keras
-tensorflow
+tensorflow==2.9.0 
 tensorboard
 protobuf~=3.19.0

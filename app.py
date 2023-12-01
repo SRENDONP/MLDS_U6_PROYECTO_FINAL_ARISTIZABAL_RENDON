@@ -1,7 +1,5 @@
 import streamlit as st
 from utils import *
-import os
-os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
 
 # Establecer la configuración de la página para un tema y un título
 st.set_page_config(page_icon="👨‍⚕️", page_title="Detección de Neumonía", layout="centered")

@@ -117,13 +117,13 @@ El F1-score, que combina precisión y recall, proporciona una medida equilibrada
 
 **Matríz de Confusión**
 
-![Alt text](image.png)
+![Alt text](/src/nombre_paquete/images/image.png)
 
 -----
 
 **F1 Score**
 
-![Alt text](image-3.png)
+![Alt text](/src/nombre_paquete/images/image-3.png)
 -----
 ### Evaluación del Modelo 2 (Transfer Learning):
 El modelo de transfer learning (Modelo 2) fue evaluado utilizando diversas métricas que proporcionan una comprensión detallada de su rendimiento en la tarea de clasificación de Imágenes de rayos X.
@@ -148,12 +148,13 @@ El modelo de transfer learning (Modelo 2) fue evaluado utilizando diversas métr
 
 **Matríz de Confusión:**
 
-![Alt text](image-1.png)
+![Alt text](/src/nombre_paquete/images/image-1.png)
 
 ---------
 
 **F1 Score**
-![Alt text](image-2.png)
+
+![Alt text](/src/nombre_paquete/images/image-2.png)
 
 
 ## Conclusiones y Recomendaciones

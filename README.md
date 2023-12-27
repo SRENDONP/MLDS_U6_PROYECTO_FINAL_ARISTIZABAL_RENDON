@@ -1,14 +1,14 @@
-# Detección de Neumonía por Virus o Bacteria
+# Pneumonia Detection by Virus or Bacteria
 
-Aplicación de Streamlit para clasificar imágenes de rayos X y detectar si están relacionadas con neumonía causada por virus o bacterias.
-El repo de este aplicativo se encuentra en [link](https://github.com/SRENDONP/MLDS_U6_PROYECTO_FINAL_ARISTIZABAL_RENDON)
+Streamlit application to classify chest X-ray images and detect whether they are related to pneumonia caused by viruses or bacteria.
+The repository for this application can be found [here](https://github.com/SRENDONP/MLDS_U6_PROYECTO_FINAL_ARISTIZABAL_RENDON)
 
-## Instalación
+## Installation
 
-Para instalar las dependencias de este proyecto, ejecute el siguiente comando:
+To install the dependencies for this project, execute the following command:
 
 ### pip install -r requirements.txt
 
-Para ejecutar la aplicación en local, use:
+To install the dependencies for this project, execute the following command:
 
 ### streamlit run app.py

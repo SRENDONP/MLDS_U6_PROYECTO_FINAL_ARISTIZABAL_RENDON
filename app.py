@@ -41,3 +41,4 @@ with c30:
                 st.success("The X-ray image corresponds to a person with bacterial pneumonia.")
             elif category == 'Virus':
                 st.success("The X-ray image corresponds to a person with viral pneumonia.")
+

@@ -1,20 +1,20 @@
 import streamlit as st
 from utils import *
 
-# Establecer la configuración de la página para un tema y un título
-st.set_page_config(page_icon="👨‍⚕️", page_title="Detección de Neumonía", layout="centered")
+# Set page configuration for theme and title
+st.set_page_config(page_icon="👨‍⚕️", page_title="Pneumonia Detection", layout="centered")
 
-st.header("Proyecto :ambulance:", anchor="large")
+st.header("Project :ambulance:", anchor="large")
 
-# Título y subida de imagen
-st.image("https://content21.sabervivirtv.com/medio/2021/01/11/neumonia-ficha_f1171fba_1280x720.jpg", width=750)
-st.title("Detección de Neumonía por Virus o Bacterias :mask:")
+# Title and image upload
+st.image("https://img.freepik.com/vector-gratis/concepto-neumonia-coronavirus_23-2148518517.jpg?w=996&t=st=1703690947~exp=1703691547~hmac=6360ca8036854f4354c70ba292a11421de7f22a633398ea7c25d821c5dd0ffb9", width=750)
+st.title("Pneumonia Detection by Virus or Bacteria :mask:")
 
-st.markdown("### Resumen del Proyecto")
+st.markdown("### Project Summary")
 st.markdown("""
-    **Objetivo del Proyecto:** Desarrollar un sistema de IA para diagnosticar neumonía y determinar su origen (viral o bacteriano) a partir de radiografías pulmonares.
+    **Project Objective:** Develop an AI system to diagnose pneumonia and determine its origin (viral or bacterial) from chest X-rays.
     
-    **Equipo del Proyecto:**
+    **Project Team:**
     - Sebastián Rendón Patiño
     - Andrés Felipe Aristizábal Miranda
 """)
@@ -23,21 +23,21 @@ c30, c31 = st.columns([9, 1])
     
 with c30:
     st.markdown("""
-    ## Sube tu imagen de Rayos X en formato .jpeg
+    ## Upload your X-ray image in .jpeg format
 """)
-    archivo_subido = st.file_uploader("", type="jpeg", key="1")
-    if archivo_subido is not None:
-        with st.spinner('Analizando imagen...'):
-            # Lógica para leer datos y predecir
-            dato = leer_datos(archivo_subido)
-            modelo = cargar_modelo() 
-            prediccion = predecir(modelo=modelo, dato=dato)
-            categoria = obtener_categoria(prediccion=prediccion)
+    uploaded_file = st.file_uploader("", type="jpeg", key="1")
+    if uploaded_file is not None:
+        with st.spinner('Analyzing image...'):
+            # Logic to read data and predict
+            data = read_data(uploaded_file)
+            model = load_model() 
+            prediction = predict(model=model, data=data)
+            category = get_category(prediction=prediction)
             
-            # Visualización de resultados
-            if categoria == 'Normal':
-                st.success("La imagen de Rayos X corresponde a una persona que está sana.")
-            elif categoria == 'Bacteria':
-                st.success("La imagen de Rayos X corresponde a una persona que tiene neumonía producto de una bacteria.")
-            elif categoria == 'Virus':
-                st.success("La imagen de Rayos X corresponde a una persona que tiene neumonía producto de un virus.")
+            # Display results
+            if category == 'Normal':
+                st.success("The X-ray image corresponds to a healthy person.")
+            elif category == 'Bacteria':
+                st.success("The X-ray image corresponds to a person with bacterial pneumonia.")
+            elif category == 'Virus':
+                st.success("The X-ray image corresponds to a person with viral pneumonia.")

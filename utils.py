@@ -4,11 +4,11 @@ import tensorflow as tf
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.layers import Dense, Flatten, Dropout
 
-modelo = None
+model = None
 
-class Model_Tl(Model):
+class TransferLearningModel(Model):
     def __init__(self):
-        super(Model_Tl, self).__init__()
+        super(TransferLearningModel, self).__init__()
 
         extractor = tf.keras.applications.VGG19(weights='imagenet',
                                                 include_top=False,
@@ -25,12 +25,12 @@ class Model_Tl(Model):
 
         self.model = Model(inputs=extractor.input, outputs=output)
         
-def leer_datos(archivo_subido):
-    file_bytes = np.asarray(bytearray(archivo_subido.read()), dtype=np.uint8)
+def read_data(uploaded_file):
+    file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img_file = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
 
     if img_file is None:
-        raise ValueError("No se pudo decodificar la imagen")
+        raise ValueError("Unable to decode the image")
 
     resized_img = cv2.resize(img_file, (150, 150))
     img_arr = np.asarray(resized_img)
@@ -38,23 +38,23 @@ def leer_datos(archivo_subido):
     
     return img_tensor
 
-def cargar_modelo():
-    global modelo
-    if modelo is None:
-        modelo = load_model("model_VGG19.h5")
-    return modelo
+def load_model():
+    global model
+    if model is None:
+        model = load_model("model_VGG19.h5")
+    return model
 
-def predecir(modelo, dato):
-    y = modelo.predict(dato).argmax()
+def predict(model, data):
+    y = model.predict(data).argmax()
     return y
 
-def obtener_categoria(prediccion):
-    if prediccion == 0:
-        categoria = 'Bacteria'
-    elif prediccion == 1:
-        categoria = 'Normal'
-    elif prediccion == 2:
-        categoria = 'Virus'
+def get_category(prediction):
+    if prediction == 0:
+        category = 'Bacteria'
+    elif prediction == 1:
+        category = 'Normal'
+    elif prediction == 2:
+        category = 'Virus'
     else:
-        print("Se ha producido un error en la predicción")
-    return categoria
+        print("An error occurred in prediction")
+    return category
